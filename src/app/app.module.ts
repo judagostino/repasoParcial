@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ArticulosFamiliasComponent } from './articulos-familias/articulos-familias.component';
@@ -17,7 +17,7 @@ import { MockArticulosService } from './mock-articulos.service';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule,
+  imports:      [ BrowserModule, FormsModule, HttpClientModule,ReactiveFormsModule,
    RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
@@ -26,7 +26,7 @@ import { MockArticulosService } from './mock-articulos.service';
     ])
  ],
   declarations: [ 
-    AppComponent, HelloComponent, ArticulosFamiliasComponent, InicioComponent, MenuComponent, ArticulosComponent ],
+    AppComponent, HelloComponent, ArticulosFamiliasComponent, InicioComponent, MenuComponent, ArticulosComponent,  ],
   bootstrap:    [ AppComponent ],
   providers: [
     MockArticulosFamiliasService, ArticulosFamiliasService, 
